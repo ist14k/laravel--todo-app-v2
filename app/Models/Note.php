@@ -10,6 +10,11 @@ class Note extends Model
     /** @use HasFactory<\Database\Factories\NoteFactory> */
     use HasFactory;
 
+    protected $fillable = [
+        'task_id',
+        'content',
+    ];
+
     public function task()
     {
         return $this->belongsTo(Task::class);
